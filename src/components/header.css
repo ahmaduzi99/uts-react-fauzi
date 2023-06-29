@@ -1,0 +1,60 @@
+body{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+}
+
+.logoToko{
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+}
+
+.textnav{
+    margin-right: 100px;
+}
+
+
+.wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: solid 1px black;
+}
+
+.wrapper-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.list-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item:hover {
+    background: skyblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    min-width: 6rem;
+    color: rgb(255, 253, 253);
+    text-align: center;
+}
