@@ -56,54 +56,10 @@ export default function App () {
   const [editHarga,setEditHarga]=useState("")
   const [Id, SetId] = useState("")
   const nextId = useRef("7")
-  const [searchProduct, setSearchProduct] = useState('')
-  const [sortBy, setSortBy] = useState('id')
-  const [typeSort, setTypeSort] = useState('asc')
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState("");
-
-  let productBiasa = vape.toSorted((a,b) => {
-    if(typeSort == 'asc') {
-        return a[sortBy] < b[sortBy] ? -1 : 1;
-    }else {
-        return a[sortBy] > b[sortBy] ? -1 : 1;
-    }
-  
- }).filter((vape) => vape.namaVape.toLowerCase().includes(searchProduct) && vape.harga > minPrice && vape.harga < maxPrice)
 
   return (
     <>
       <Header/>
-      
-      <div className='wrapper-cari'>
-                <label>Cari Produk</label>
-                <input type="text" value={searchProduct} onChange={(e) => setSearchProduct(e.target.value)} />
-            </div>
-            <div className='wrapper-cari'>
-              <label>Minimal Harga</label>
-              <input type="number" value={minPrice} onChange={(e) => setMinPrice(e.target.value)} />
-            </div>
-            <div className='wrapper-cari'>
-              <label>Maksimal Harga</label>
-              <input type="number" value={maxPrice} onChange={(e) => {
-                e.target.value ? setMaxPrice(e.target.value) : setMaxPrice(Infinity)
-              }} />
-            </div>
-            <div className="wrapper-cari">
-            <label>Sorting By</label>
-            <select name="sortingBy" id="sortingBy" onChange={(e) => setSortBy(e.target.value)}>
-                <option value="id">ID</option>
-                <option value="name">Nama Produk</option>
-                <option value="price">Harga Produk</option>
-            </select>
-            </div>
-            <div className="wrapper-cari">
-            <label>Type Sort</label>
-            <select name="sort" id="sort" onChange={(e) => setTypeSort(e.target.value)}>
-                <option value="asc">Ascending</option>
-                <option value="desc">Descending</option>
-            </select>
-            </div>
       <main>
             <div className='container'>
                
